@@ -1,21 +1,50 @@
 body {
-    background-color: #1d3e81;
-    color: #E8EFF0;
-    text-align: center;
+  background-color: #1d3e81;
+  color: #e8eff0;
+  text-align: center;
 }
 img {
-    width: 50%;
+  width: 50%;
 }
 a {
-    color: #E8EFF0;
+  color: #e8eff0;
 }
 
 a.backButton {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    z-index: 1;
-    text-decoration: none;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1;
+  text-decoration: none;
 }
 
 /* Your code here */
+@media print and (orientation: portrait) {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  a.backButton {
+    display: none;
+  }
+}
+
+@media print and (orientation: landscape) {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  a.backButton {
+    display: none;
+  }
+}

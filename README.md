@@ -8,7 +8,7 @@ the CSS.
 
 Clone the practice from the [starter].
 
-Once you've in VS Code, you can drag the __index.html__ file into your browser
+Once you've in VS Code, you can drag the **index.html** file into your browser
 to view the webpage, or use the **File Explorer** to open it in your browser.
 
 > Remember to save the CSS file and refresh the page in the browser whenever you
@@ -16,15 +16,8 @@ to view the webpage, or use the **File Explorer** to open it in your browser.
 
 ## Background and Context
 
-The __index.html__ page is the home page of this application. The other web
-pages of the app are in the __pages__ directory. You can also view and access
-these pages through links on the home page.
-
-The CSS stylesheets and images for the app are in the __styles__ directory. When
-doing following phases, choose the best file to include the CSS rules for each
-task.
-
-## Phase 1: Hide elements while printing
+The **index.html** page is the home page of this application. The other web
+pages of the app a## Phase 1: Hide elements while printing
 
 Please hide the navigation buttons when printing any page on the website.
 
@@ -33,6 +26,12 @@ Please hide the navigation buttons when printing any page on the website.
 Remember, you can open the **Print Preview** dialog to see what will happen
 without having to use any paper (or even have a printer). For extra testing,
 you may also choose to save a PDF from time to time.
+re in the **pages** directory. You can also view and access
+these pages through links on the home page.
+
+The CSS stylesheets and images for the app are in the **styles** directory. When
+doing following phases, choose the best file to include the CSS rules for each
+task.
 
 ## Phase 2: Improve header size on landing page
 
@@ -47,23 +46,23 @@ to use.
 
 Expected Behavior
 
-* Desktop users should see link colors, but not underlines. Then when pointing
+- Desktop users should see link colors, but not underlines. Then when pointing
   the mouse at the link, the underlines should appear.
-* Mobile users should always see underlines, as it makes it easier to find the
+- Mobile users should always see underlines, as it makes it easier to find the
   right place to click.
-* This does NOT apply to links that are used for navigation like below the
+- This does NOT apply to links that are used for navigation like below the
   header, or "Back" on the large image page.
-* This should apply to all pages on the website.
+- This should apply to all pages on the website.
 
 > Hint: Here is some CSS that will show underlines only when hovering over a
 > link.
 
 ```css
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 ```
 
@@ -92,12 +91,12 @@ their requests in no particular order.
 
 Here are four possibilities from narrowest to widest:
 
-* Single column, image above description (current implementation), all content
+- Single column, image above description (current implementation), all content
   centered, image filling width of box
-* Single column, image to the left with description on the right, title and
+- Single column, image to the left with description on the right, title and
   link left-aligned, image only at thumbnail size (not growing)
-* Two cards side-by-side (like 2 columns), image above description (like first)
-* Two columns, image on left with description on right (like second)
+- Two cards side-by-side (like 2 columns), image above description (like first)
+- Two columns, image on left with description on right (like second)
 
 It seems like the largest width that looks good for the first option is around
 600 pixels. Then every 300 pixels seems like a good cut-over to go to the next

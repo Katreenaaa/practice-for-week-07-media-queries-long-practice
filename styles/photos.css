@@ -1,26 +1,158 @@
 .photo-card {
-    background-color: #1d3e81;
-    color: #E8EFF0;
-    padding: 0.5rem 2rem 1.5rem 2rem;
-    border-radius: 2rem;
-    margin: 0 0 10px 0;
-    text-align: center;
+  background-color: #1d3e81;
+  color: #e8eff0;
+  padding: 0.5rem 2rem 1.5rem 2rem;
+  border-radius: 2rem;
+  margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .photo-card a {
-    color: #E8EFF0;
+  color: #e8eff0;
 }
 .photo-card img {
-    width: 100%;
+  width: 100%;
 }
 
 .photo-card p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .photo-card .content {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 /* Your code here */
+/* Base – Narrow (default)
+   ------------------------------------------ */
+/* Already one column, image on top, centered */
+.photo-card {
+  text-align: center;
+}
+.photo-card .content {
+  display: block;
+  text-align: center;
+}
+.photo-card img {
+  width: 100%; /* full-width image */
+  margin-bottom: 1rem;
+}
+
+/* Moderate – ≥600px: image left, text right
+   ------------------------------------------ */
+@media screen and (min-width: 600px) {
+  .photo-card {
+    text-align: left;
+  }
+
+  .photo-card img {
+    width: 342px;
+    flex-shrink: 0;
+  }
+
+  .photo-card .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+    gap: 1.5rem;
+  }
+}
+
+/* Wider – ≥900px: two cards per row, image on top
+   ------------------------------------------ */
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .photo-card {
+    text-align: center;
+  }
+  .photo-card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-card img {
+    width: 100%;
+  }
+}
+
+/* Widest – ≥1200px: two columns, image left, text right
+   ------------------------------------------ */
+@media screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .photo-card {
+    text-align: left;
+  }
+
+  .photo-card .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .photo-card img {
+    width: 40%;
+    flex-shrink: 0;
+  }
+}
+
+/* Print styles */
+@media print and (orientation: portrait) {
+  /* Moderate layout */
+  .container {
+    display: block; /* single column */
+  }
+
+  .photo-card {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .photo-card .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.3rem;
+  }
+
+  .photo-card img {
+    width: 250px; /* thumbnail width */
+    flex-shrink: 0;
+  }
+}
+
+@media print and (orientation: landscape) {
+  /* Wider layout: two cards side by side */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    gap: 10px;
+  }
+
+  .photo-card {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .photo-card .content {
+    display: flex;
+    flex-direction: row; /* image on top for simplicity */
+    align-content: left;
+    gap: 1rem;
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: auto;
+  }
+}
